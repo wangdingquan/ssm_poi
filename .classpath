@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-3.3 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-commons-3.3 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-commons-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-tree-3.3 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/asm-tree-3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/c3p0-0.9.1 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/c3p0-0.9.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.net.sf.cglib-2.2.0 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.org.aopalliance-1.0.0 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.org.aopalliance-1.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/com.springsource.org.aspectj.weaver-1.6.8.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-beanutils-1.8.0 - 副本.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-beanutils-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-fileupload-1.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/ezmorph-1.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/jackson-annotations-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/jackson-core-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/jackson-databind-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/json-lib-2.2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/mybatis-3.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/mybatis-spring-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/mysql.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/ognl-3.0.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/quartz-2.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/slf4j-api-1.6.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/slf4j-log4j12-1.6.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-aop-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-aspects-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-beans-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-context-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-context-support-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-core-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-expression-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-jdbc-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-jms-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-messaging-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-orm-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-tx-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-web-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-webmvc-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/spring-websocket-4.1.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wangdingquan/Downloads/lib/standard.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

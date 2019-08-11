@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.debug.steadyjack.mapper.ProductMapper" >
+  <resultMap id="BaseResultMap" type="com.debug.steadyjack.model.Product" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="unit" property="unit" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="DOUBLE" />
+    <result column="stock" property="stock" jdbcType="DOUBLE" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="purchase_date" property="purchaseDate" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, unit, price, stock, remark, purchase_date
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />@JsonFormat(pattern="yyyy-MM-dd",timezone="GMT+8")
+    from product
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from product
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.debug.steadyjack.model.Product" >
+    insert into product (id, name, unit, 
+      price, stock, remark, 
+      purchase_date)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{unit,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DOUBLE}, #{stock,jdbcType=DOUBLE}, #{remark,jdbcType=VARCHAR}, 
+      #{purchaseDate,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.debug.steadyjack.model.Product" >
+    insert into product
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="unit != null" >
+        unit,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="stock != null" >
+        stock,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="purchaseDate != null" >
+        purchase_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null" >
+        #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        #{stock,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseDate != null" >
+        #{purchaseDate,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.debug.steadyjack.model.Product" >
+    update product
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="unit != null" >
+        unit = #{unit,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DOUBLE},
+      </if>
+      <if test="stock != null" >
+        stock = #{stock,jdbcType=DOUBLE},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="purchaseDate != null" >
+        purchase_date = #{purchaseDate,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.debug.steadyjack.model.Product" >
+    update product
+    set name = #{name,jdbcType=VARCHAR},
+      unit = #{unit,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      stock = #{stock,jdbcType=DOUBLE},
+      remark = #{remark,jdbcType=VARCHAR},
+      purchase_date = #{purchaseDate,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  
+  <!-- 查询所有产品 -->
+  <select id="selectAll" resultMap="BaseResultMap">
+  	SELECT <include refid="Base_Column_List"/> FROM product	WHERE 1=1 
+  	<if test="name!=null and name!='' ">
+  		AND `name` LIKE CONCAT('%', #{name}, '%')
+  	</if>
+  </select>
+  
+  <!-- 批量插入数据 -->
+  <insert id="insertBatch" parameterType="java.util.List" useGeneratedKeys="true">
+	insert into product (name, unit,price, stock, remark,purchase_date)
+	<foreach collection="dataList" item="data" index="index" separator=",">
+	    values (#{data.name,jdbcType=VARCHAR}, #{data.unit,jdbcType=VARCHAR},#{data.price,jdbcType=DOUBLE}, 
+	    #{data.stock,jdbcType=DOUBLE}, #{data.remark,jdbcType=VARCHAR}, #{data.purchaseDate,jdbcType=DATE})
+	</foreach>
+  </insert>
+  
+</mapper>

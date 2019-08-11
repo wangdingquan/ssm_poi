@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+    id="WebApp_ID" version="3.0">
+
+   <welcome-file-list>
+          <welcome-file>product.jsp</welcome-file>
+   </welcome-file-list>
+   
+   <!-- spring4的相关配置(快捷键:alt+/): 项目启动加载并启动监听应用程序上下文相关组件对接(将由加载的配置进行管理->相当于loc) -->
+   <context-param>
+         <param-name>contextConfigLocation</param-name>
+         
+         <!-- 此时创建spring配置文件 -->
+         <param-value>classpath:applicationContext.xml</param-value>
+   </context-param>
+   
+   <listener>
+      <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+   </listener>
+   
+   <!-- 统一编码过滤器:前后端通过http协议进行数据交互时进行编码的限制 -->
+   <filter>
+      <filter-name>encodingFilter</filter-name>
+      <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+      
+      <!-- 点进该类查看源码树就知道可以为其提供初始化参数 -->
+      <init-param>
+         <param-name>encoding</param-name>
+         <param-value>UTF-8</param-value>
+      </init-param>
+      <init-param>
+         <param-name>forceEncoding</param-name>
+         <param-value>true</param-value>
+      </init-param>
+      
+   </filter>
+   <filter-mapping>
+       <filter-name>encodingFilter</filter-name>
+       <url-pattern>/*</url-pattern>
+   </filter-mapping>
+   
+   <!-- springmvc配置:充当前端控制器,转发并响应所有请求 -->
+   <servlet>
+       <servlet-name>dispatcherServlet</servlet-name>
+       <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+       <init-param>
+          <param-name>contextConfigLocation</param-name>
+          <param-value>classpath:springmvc.xml</param-value>
+       </init-param>
+       <load-on-startup>1</load-on-startup>
+       
+       <!-- 支持异步请求,加载@Responsebody注解,此时需要将web.xml的version改为3.0，因为3.0才支持 -->
+       <async-supported>true</async-supported>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>dispatcherServlet</servlet-name>
+        
+        <!-- 过滤器以.do 结尾的url,你也可以自定义为.html,即过滤html的请求 -->
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+   
+  <display-name>Archetype Created Web Application</display-name>
+</web-app>
